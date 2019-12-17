@@ -3,6 +3,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro" 
   subnet_id  = "subnet-00e6c9565d312b4cc"
   associate_public_ip_address  = "true"
+  key_name = aws_key_pair.deployer.key_name
 tags = { 
     Name = "HelloWorld" 
   } 
