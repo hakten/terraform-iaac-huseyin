@@ -4,6 +4,9 @@ resource "aws_instance" "web" {
   subnet_id  = "subnet-00e6c9565d312b4cc"
   associate_public_ip_address  = "true"
   key_name = aws_key_pair.deployer.key_name
+
+  user_data = file("userdata_file")
+
 tags = { 
     Name = "HelloWorld" 
   } 
