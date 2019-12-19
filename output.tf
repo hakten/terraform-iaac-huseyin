@@ -11,5 +11,9 @@ output "wordpress" {
 }
 
 output "wordpress_password" {
-    value = "password"
+    value = "not referenced value my type"
+}
+
+output "IPs" {
+    value = aws_instance.web.*.public_ip
 }
