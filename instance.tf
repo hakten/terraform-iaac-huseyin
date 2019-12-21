@@ -7,7 +7,7 @@ resource "aws_instance" "web" {
   security_groups = ["allow_tls"] 
   user_data = file("userdata_file")
 
-tags = { 
+  tags = { 
     Name = "HelloWorld"
   } 
 } 
