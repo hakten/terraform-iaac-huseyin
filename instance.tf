@@ -23,6 +23,16 @@ resource "aws_instance" "web" {
        command = "wget -O /tmp  https://wordpress.org/download/"
        command  = "mkdir /tmp/test"
       }
+      provisioner "file" { 
+       source      = "awx" 
+       destination = "/tmp/" 
+       connection { 
+       host        = "${self.public_ip}" 
+       type        = "ssh" 
+       user        = "${var.user}" 
+       private_key = "${file(var.ssh_key_location)}" 
+      } 
+  } 
   lifecycle{
     prevent_destroy = false
   }
