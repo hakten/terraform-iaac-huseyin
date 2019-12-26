@@ -10,9 +10,6 @@ output "wordpress" {
     value = aws_route53_record.www.name
 }
 
-output "wordpress_password" {
-    value = "not referenced value my type"
-}
 
 output "IPs" {
     value = aws_instance.web.*.public_ip
