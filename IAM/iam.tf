@@ -24,11 +24,8 @@ resource "aws_iam_policy" "policy" {
 "Statement": [ 
 { 
 "Sid": "VisualEditor0", 
-
 "Effect": "Allow", 
-
 "Action": "ec2:*", 
-
 "Resource": "*" 
 } 
 ] 
