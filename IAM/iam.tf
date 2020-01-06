@@ -2,10 +2,12 @@ resource "aws_iam_user" "tim" {
    name = "tim" 
    path = "/" 
 } 
+
 resource "aws_iam_group" "developers" { 
     name = "developers" 
     path = "/" 
 } 
+
 resource "aws_iam_group_membership" "developers_team" { 
   name = "developers-group-membership" 
   users = [ 
@@ -26,24 +28,24 @@ resource "aws_iam_policy" "example" {
   policy = data.aws_iam_policy_document.example.json 
 } 
 
-resource "aws_iam_policy" "policy" { 
-  name = "test_policy3" 
-  path = "/" 
-  description = "My test policy" 
-  policy = <<EOF
-  { 
-    "Version": "2012-10-17", 
-    "Statement": [ 
-  { 
-    "Sid": "VisualEditor0", 
-    "Effect": "Allow", 
-    "Action": "ec2:*", 
-    "Resource": "*" 
-  } 
-  ] 
-  } 
-EOF
-}
+# resource "aws_iam_policy" "policy" { 
+#   name = "test_policy3" 
+#   path = "/" 
+#   description = "My test policy" 
+#   policy = <<EOF
+#   { 
+#     "Version": "2012-10-17", 
+#     "Statement": [ 
+#   { 
+#     "Sid": "VisualEditor0", 
+#     "Effect": "Allow", 
+#     "Action": "ec2:*", 
+#     "Resource": "*" 
+#   } 
+#   ] 
+#   } 
+# EOF
+# }
 
 resource "aws_iam_role" "test_role" {
 name = "test_role"
