@@ -1,1 +1,0 @@
-bucketname = "some-made-up-bucket-huseyin3"
