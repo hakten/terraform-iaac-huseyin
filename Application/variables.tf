@@ -14,6 +14,12 @@ variable "environment" {}
 variable "terraform" {}
 
 
+variable "try" {
+  default = "us-west-1a"
+}
+
+
+
 
 
 
