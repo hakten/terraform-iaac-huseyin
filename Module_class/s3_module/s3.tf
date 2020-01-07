@@ -7,7 +7,6 @@ module "bucket1" {
   bucketname = var.buck
 }  
 
-variable "buck" {
-  default = "kjasdlk"
-  
-}
+variable "buck" {}
+
+buck = "some-made-up-bucket-huseyin3"
