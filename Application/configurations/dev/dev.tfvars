@@ -1,4 +1,4 @@
-region = "us-east-1"
+region            = "us-east-1"
 
 s3_bucket         = "wordpress-huseyin-2019-prod"      #Will be used to set backend.tf 
 s3_folder_project = "application"                             #Will be used to set backend.tf 
