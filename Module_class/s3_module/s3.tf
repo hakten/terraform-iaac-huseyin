@@ -4,5 +4,9 @@ provider "aws"{
 
 module "bucket1" { 
   source = "./module" 
-  bucketname = "some-made-up-bucket-huseyin2"
+  bucketname = "var.buck"
 }  
+
+variable "buck" {
+  
+}
