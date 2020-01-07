@@ -8,5 +8,6 @@ module "bucket1" {
 }  
 
 variable "buck" {
+  default = "kjasdlk"
   
 }
