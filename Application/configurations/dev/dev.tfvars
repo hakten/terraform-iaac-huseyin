@@ -5,6 +5,7 @@ s3_folder_region  = "us-east-1"                    #Will be used to set backend.
 s3_folder_type    = "state"                        #Will be used to set backend.tf 
 s3_tfstate_file   = "infrastructure.tfstate"       #Will be used to set backend.tf 
 
+
 name     = "dev-wordpress"
 cidr     = "10.0.0.0/16"
 
