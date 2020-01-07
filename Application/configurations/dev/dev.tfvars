@@ -6,6 +6,7 @@ s3_tfstate_file   = "infrastructure.tfstate"          #Will be used to set backe
 
 
 environment       = "dev"  
+terraform         = "true"
 
 
 name     = "dev-wordpress"
