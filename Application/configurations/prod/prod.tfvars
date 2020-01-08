@@ -14,7 +14,7 @@ terraform         = "true"
 name     = "prod-wordpress"
 cidr     = "10.10.0.0/16"
 
-az          = "["us-west-1a","us-west-1b"]"
+az          = ["us-west-1a","us-west-1b"]
 pub-cidr    = "["10.10.1.0/24","10.10.2.0/24"]"
 priv-cidr   = "["10.10.11.0/24","10.10.12.0/24"]"
 
