@@ -5,7 +5,9 @@ variable "name" {}
 
 variable "cidr" {}
 
-variable "az" {}
+variable "az" {
+    type = string
+}
 variable "pub-cidr" {}
 variable "priv-cidr" {}
 variable "enable_nat_gateway" {}
