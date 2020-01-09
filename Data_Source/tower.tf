@@ -34,7 +34,7 @@ resource "aws_instance" "web" {
        host = self.public_ip
        type = "ssh"
        user = "centos"
-       private_key = file(var.ssh_key_location)
+       private_key = file("~/.ssh/id_rsa")
        }
        inline = ["sudo yum install -y epel-release",]
      } 
@@ -43,3 +43,11 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+
+resource "aws_route53_record" "tower" { 
+  zone_id = "ZLLTFA4ZO6PR5" 
+  name    = "tower.example.com" 
+  type    = "A" 
+  ttl     = "300" 
+  records = ["${aws_instance.web.public_ip}"]
+} 
