@@ -31,14 +31,12 @@ resource "aws_instance" "web" {
   key_name      = aws_key_pair.towerkey.key_name
   provisioner "remote-exec" {
        connection {
-       host        = self.public_ip}
-       type        = "ssh"
-       user        = "centos"
+       host = self.public_ip
+       type = "ssh"
+       user = "centos"
        private_key = file(var.ssh_key_location)
        }
-       inline = [
-          "sudo yum install -y epel-release",
-     ]
+       inline = ["sudo yum install -y epel-release",]
      } 
 
   tags = {
