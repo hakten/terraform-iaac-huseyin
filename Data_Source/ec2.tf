@@ -5,10 +5,10 @@ provider "aws" {
 data "aws_ami" "ubuntu" {
   most_recent = true
   owners = ["099720109477"]
-  filter {
-  name = "root-device-type"
-  values = ["ebs"]
- }
+filter {
+name = "root-device-type"
+values = ["ebs"]
+}
 }
 output "ami" {
   value = "${data.aws_ami.ubuntu.id}"
