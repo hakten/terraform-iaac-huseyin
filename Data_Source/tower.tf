@@ -1,7 +1,3 @@
-provider "aws" {
- region = "us-east-1"
-}
-
 data "aws_ami" "centos" {
   filter {
   name = "root-device-type"
@@ -25,7 +21,7 @@ key_name   = "towerkey"
 public_key = file("~/.ssh/id_rsa.pub")
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "tower" {
   ami           = "${data.aws_ami.centos.id}"
   instance_type = "t2.micro"
   key_name      = aws_key_pair.towerkey.key_name
@@ -49,5 +45,5 @@ resource "aws_route53_record" "tower" {
   name    = "tower.example.com" 
   type    = "A" 
   ttl     = "300" 
-  records = ["${aws_instance.web.public_ip}"]
+  records = ["${aws_instance.tower.public_ip}"]
 } 
