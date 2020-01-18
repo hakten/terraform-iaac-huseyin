@@ -1,4 +1,4 @@
-output "vpc_id1" {
+output "vpc_id" {
   value = module.wordpress.vpc_id
 }
 output "private_subnets" {
