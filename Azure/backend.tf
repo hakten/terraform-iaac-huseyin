@@ -4,5 +4,6 @@ terraform {
     storage_account_name = "evolvehuseyin"
     container_name       = "tfstate"
     key                  = "prod.tfstate"
+    access_key           = ""
   }
 }
